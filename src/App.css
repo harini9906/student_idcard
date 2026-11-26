@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f1f5f9;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: #12366a;
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 0;
+  color: #dbeafe;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 35px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.form-section,
+.preview-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #00000010;
+}
+
+.form-section h2,
+.preview-section h2 {
+  color: #12366a;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 14px 0 7px;
+  color: #334155;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 14px;
+  background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 75px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+  background: #12366a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background: #64748b;
+}
+
+.buttons button:hover {
+  opacity: 0.85;
+}
+
+.id-card {
+  width: 100%;
+  max-width: 340px;
+  margin: 15px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 5px 18px #00000015;
+}
+
+.card-header {
+  background: #12366a;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.card-header p {
+  font-size: 11px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.photo {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  background: #e2e8f0;
+  border: 3px solid #12366a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo span {
+  font-size: 45px;
+}
+
+.card-content h2 {
+  color: #12366a;
+  margin: 8px 0;
+  font-size: 21px;
+  overflow-wrap: anywhere;
+}
+
+.student-label {
+  display: inline-block;
+  background: #dcfce7;
+  color: #166534;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.details {
+  text-align: left;
+  margin-top: 20px;
+  border-top: 1px solid #cbd5e1;
+  padding-top: 12px;
+}
+
+.details p {
+  font-size: 12px;
+  color: #334155;
+  margin: 11px 0;
+  overflow-wrap: anywhere;
+}
+
+.card-footer {
+  background: #12366a;
+  color: white;
+  text-align: center;
+  padding: 12px 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.preview-note {
+  color: #64748b;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .header,
+  .form-section,
+  .preview-section > h2,
+  .preview-note {
+    display: none !important;
+  }
+
+  .container {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .preview-section {
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .id-card {
+    margin: 20px auto;
+    box-shadow: none;
+    border: 1px solid #12366a;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
